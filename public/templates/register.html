@@ -1,0 +1,36 @@
+<div class="registerCard" ng-controller="appController">
+<div class="card" style="margin: 40px auto;" >
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+            <h5 class="text-center" style="color:#b30000;">{{ errorMessage }}</h5>
+          <div class="form-group">
+            <label>First Name</label>
+            <input placeholder="Enter First Name" type="text" class="form-control" name="fName" ng-model="regForm.fName"  required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input placeholder="Enter Last Name" type="text" class="form-control" name="lName" ng-model="regForm.lName"  required />
+          </div>
+          <div class="form-group">
+            <label>Email ID</label>
+            <input placeholder="Enter Email ID" type="email" class="form-control" name="eMail" ng-model="regForm.eMail"  required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input placeholder="Enter Password" type="password" class="form-control" name="pwd" ng-model="regForm.pwd" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Confirm Password</label>
+            <input placeholder="Enter Confirm Password" type="password" class="form-control" name="cPwd" ng-model="regForm.cPwd" required />
+          </div>
+          <div class="form-group text-center">
+            <button class="btn btn-primary" ng-click="registerUser(regForm)">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

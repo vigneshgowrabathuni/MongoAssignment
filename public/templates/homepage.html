@@ -1,0 +1,61 @@
+<div class="card" style="margin-top: 20px;">
+
+  <div class="card-block">
+    <div style="margin: 50px 300px;text-align:center;">
+      <h5>Add Recipe To DB</h5>
+      <form class="navbar-form" role="search">
+        <div class="input-group add-on">
+          <input class="form-control" placeholder="Enter recipe name you want to add" ng-model="recipeNameA" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" ng-click="recipeAdd(recipeNameA)">ADD</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div style="margin: 50px 300px;text-align:center;">
+      <h5>Fetch Recipe from DB</h5>
+      <form class="navbar-form" role="search">
+        <div class="input-group add-on">
+          <input class="form-control" placeholder="Enter recipe name you want to search" ng-model="recipeNameS" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" ng-click="recipeSearch(recipeNameS)">Fetch</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div ng-show='viewContent'>
+      <div class="row" >
+        <div class="card" style="margin: 20px auto;">
+          <div ng-repeat="data in recipeData">
+            <div class="card-block" style="margin:20px">
+              <div class="thumbnail">
+                <a href="{{data.rImage}}" target="_blank">
+                  <img src="{{data.rImage}}" alt="Image" style="width: 100%">
+                </a>
+                <p style="text-align:center;color: rgb(49, 0, 128)"><strong>{{data.rName}}</strong></p>
+                <p><b>Source</b>: {{data.rSource}}</p>
+                <p><b>Ingredients</b> : {{data.rIngredients}}</p>
+                <p><b>Calories</b>    : {{data.rCalories}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 50px 300px;text-align:center;">
+      <h5>Delete Recipe from DB</h5>
+      <form class="navbar-form" role="search">
+        <div class="input-group add-on">
+          <input class="form-control" placeholder="Enter recipe name you want to search" ng-model="recipeNameD" type="text">
+          <div class="input-group-btn">
+            <button class="btn btn-default" ng-click="recipeDelete(recipeNameD)">Delete</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

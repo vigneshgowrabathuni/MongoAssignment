@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Knowledge Search(Team 2-2)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <style>
+.table th {
+  text-align: center;
+}
+</style>
+  </head>
+  <body ng-app='myApp' ng-controller="appController">
+    <div style="background-color:#0D47A1;color:white;margin:0;" >
+      <div class="row">
+        <p style="margin-left:25px;padding-top:10px;font-size:30px;cursor:pointer;" ng-click = "homePage()">Lab5</p>
+        <div class="navStyle" style="padding-top:15px;padding-right:15px;right:0;position:absolute;">
+          <a href ng-click = "aboutPage()" style="padding-right:10px">About</a>
+          <a href ng-click = "contactPage()" style="padding-right:10px">Contact</a>
+          <a href ng-click = "logoutFn()" style="padding-right:10px">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/angular-routes/routing.js"></script>
+    <script src="/controllers/appController.js"></script>
+    <script src="/services/mainService.js"></script>
+    <script>
+
+    (function(){
+      var p = document.createElement('script');
+      p.type = 'text/javascript';
+      p.async = true;
+      p.src = 'https://apis.google.com/js/client.js?onload=onLoadFn()';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(p,s);
+
+    })();
+
+    window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '2482251871999229',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.12',
+          status           : true
+        });
+
+        FB.getLoginStatus(function(response){
+          if(response.status === 'connected'){
+
+          }else if(response.status === 'not_authorized'){
+
+          }else{
+
+          }
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+
+    </script>
+  </body>
+</html>

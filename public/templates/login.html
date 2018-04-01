@@ -1,0 +1,37 @@
+<div class="loginCard" ng-controller="appController">
+<div class="card" style="margin: 60px auto;" >
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <h5 class="text-center" style="color:#b30000;">{{ errorMessage }}</h5>
+          <legend class="text-center">Sign in with</legend>
+          <div class="form-group">
+            <div class="row">
+					    <a href ng-click="onGoogleLogin()" class="btn-google col-md-5">
+						    <img src="./images/icon-google.png" alt="GOOGLE">
+						    Google
+					    </a>
+              <a href ng-click="onFacebookLogin()" class="btn-google col-md-5">
+                <img src="./images/icon-facebook.png" alt="FACEBOOK">
+                Facebook</a>
+            </div>
+          </div>
+          <div>
+            <label for="username-email">Email ID</label>
+            <input placeholder="Enter Email ID" type="text" class="form-control" ng-focus="onFocusFn()" name="eMail" ng-model="form.eMail"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input placeholder="Enter Password" type="password" class="form-control" name="pwd" ng-model="form.pwd"/>
+          </div>
+          <div class="form-group text-center">
+            <button class="btn btn-success" ng-click="login(form)">Login</button>
+            <button class="btn btn-primary" ng-click="registerFn()">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

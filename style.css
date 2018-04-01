@@ -1,0 +1,60 @@
+body{
+	background-image:url('./images/recipe-bg.jpg');
+
+   background-repeat:no-repeat;
+
+   background-size:cover;
+   /* background-color: #F8F8F8; */
+}
+.loginCard, .registerCard > .card{
+	margin: 0 auto;
+	width: 350px;
+	height: auto;
+}
+
+.navStyle > a{
+	font-size: 18px;
+	color: #fff;
+}
+
+a {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0;
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+/*------------------------------------------------------------------
+[ Button sign in with ]*/
+.btn-google {
+	height: 50px;
+  color: #000;
+  background-color: #fff;
+	margin: 15px auto;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-google img {
+  width: 20px;
+  margin-right: 15px;
+  padding-bottom: 3px;
+}
+
+.btn-google:hover:before {
+  opacity: 1;
+}

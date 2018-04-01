@@ -1,0 +1,23 @@
+angular.module('myApp',['ngRoute'])
+.config(['$routeProvider', function($routeProvider){
+    $routeProvider
+    .when('/',{
+      templateUrl:'./templates/login.html'
+    })
+    .when('/login',{
+      templateUrl:'./templates/login.html'
+    })
+    .when('/register',{
+      templateUrl:'./templates/register.html'
+    })
+    .when('/homepage',{
+      templateUrl:'./templates/homepage.html'
+    })
+    .when('/about',{
+      templateUrl:'./templates/about.html'
+    })
+    .when('/contact',{
+      templateUrl:'./templates/contact.html'
+    })
+    .otherwise({redirectTo:'/'});
+}]);
