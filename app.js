@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var UserRoute = require('./routes/userRouter');
 // Mongo DB Url
-var url = 'mongodb://gharimanasa:Harimanasa7@ds035643.mlab.com:35643/lab5';
+var url = 'mongodb://vignesh:welcome123@ds115472.mlab.com:15472/mydb';
 
 mongoose.connect(url,function(err,db){
   console.log('connected');
